@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Marc Hader for County Commissioner | Canadian County, Oklahoma</title>
+
+<meta name="description" content="Marc Hader is running for County Commissioner in Canadian County, Oklahoma. Learn about his experience, accomplishments, priorities, and commitment to responsible leadership, infrastructure, and public safety." />
+
+<meta name="keywords" content="Marc Hader, Canadian County Commissioner, Oklahoma county commissioner, Marc Hader campaign, Canadian County Oklahoma, county leadership, roads and bridges Oklahoma, public safety Canadian County" />
+
+<meta name="author" content="Friends of Marc Hader" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.hader4commissioner.com/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Marc Hader for County Commissioner | Canadian County, Oklahoma" />
+<meta property="og:description" content="Meet Marc Hader, candidate for County Commissioner in Canadian County, Oklahoma. Proven leadership, infrastructure improvements, and responsible government." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.hader4commissioner.com/" />
+<meta property="og:image" content="https://www.hader4commissioner.com/Images/Banner.webp" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Marc Hader for County Commissioner | Canadian County, Oklahoma" />
+<meta name="twitter:description" content="Learn about Marc Hader’s experience, accomplishments, and priorities as a candidate for County Commissioner in Canadian County, Oklahoma." />
+<meta name="twitter:image" content="https://www.hader4commissioner.com/Images/Banner.webp" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PoliticalCandidate",
+  "name": "Marc Hader",
+  "jobTitle": "Candidate for Canadian County Commissioner",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Canadian County",
+    "addressRegion": "OK",
+    "addressCountry": "US"
+  },
+  "url": "https://www.hader4commissioner.com/",
+  "image": "https://www.hader4commissioner.com/Images/Banner.webp",
+  "description": "Marc Hader is running for County Commissioner in Canadian County, Oklahoma, focused on infrastructure improvements, fiscal responsibility, and public safety."
+}
+</script>
+
+</head>
+
+<style>
+
+/* ================= GLOBAL RESET ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --bg: #000;
+  --accent: #FFD400;
+  --accent-dark: #E6B800;
+  --muted: #fff;
+}
+
+/* ================= GLOBAL FONT (ROCKWELL) ================= */
+html {
+  font-family: "Rockwell", "Rockwell Nova", "Roboto Slab", "Arvo", serif;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+a,
+p,
+h1, h2, h3, h4, h5, h6,
+span,
+div,
+li,
+ul,
+ol,
+nav,
+header,
+footer,
+section {
+  font-family: inherit;
+}
+
+/* ================= BODY ================= */
+body {
+  background: var(--bg);
+  color: var(--muted);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  background: #111;
+  border-bottom: 2px solid #333;
+  border-radius: 12px;
+}
+
+.logo img {
+  height: 120px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover { transform: scale(1.05); }
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  background: var(--accent);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+
+nav a:hover {
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
+.donate-link:hover { transform: scale(1.1); }
+
+/* ================= BURGER MENU ================= */
+.burger {
+  display: none;
+  width: 28px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--accent);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.burger div {
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* ================= MOBILE NAV ================= */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  z-index: 1002;
+}
+
+.mobile-nav.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav a {
+  width: 75%;
+  margin: 12px 0;
+  padding: 16px 32px;
+  background: var(--accent);
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mobile-nav a:hover { background: var(--accent-dark); }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* ================= HERO + HAZARD FRAME ================= */
+.hero-frame {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(45deg, #FFD400 0 16px, #000 16px 32px);
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero img.active { opacity: 1; }
+
+.hero .caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 20px;
+  background: rgba(0,0,0,0.6);
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  max-width: 80%;
+  pointer-events: none;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  line-height: 1.3;
+}
+
+.hero .caption.active { opacity: 1; }
+
+@media (min-width: 1081px) {
+  .hero .caption {
+    font-size: 2rem;
+    max-width: 60%;
+    padding: 16px 24px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero .caption {
+    font-size: 1.4rem;
+    max-width: 90%;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 14px;
+    line-height: 1.4;
+  }
+}
+
+/* ================= MARC FEATURE SECTION ================= */
+.marc-feature {
+  width: 100%;
+  margin: 60px 0;
+  padding: 0 16px;
+}
+
+.feature-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-text {
+  flex: 1 1 400px;
+  color: var(--accent);
+  text-align: left;
+}
+
+.feature-text h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.feature-text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+/* ================= FULL-WIDTH DIVIDER ================= */
+.feature-divider {
+  width: 100%;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 4px;
+  margin: 32px 0;
+}
+
+/* ================= FEATURE IMAGE ================= */
+.feature-image {
+  flex: 0 0 auto;
+  display: inline-block;
+  padding: 12px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(45deg, #FFD400 0 12px, #000 12px 24px);
+  max-width: 400px;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.feature-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.feature-image img:hover { transform: scale(1.03); }
+
+/* ================= GOOGLE FORM SECTION ================= */
+.form-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 24px;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.form-container h2 {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.form-container iframe {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1080px) {
+  nav { display: none; }
+  .burger { display: flex; }
+  .hero { height: 55vh; }
+
+  .feature-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .feature-image {
+    order: -1;
+    padding: 8px;
+    max-width: 80%;
+  }
+
+  .feature-text h2 { font-size: 2.2rem; }
+  .feature-text p { font-size: 1.1rem; }
+  .feature-divider { height: 6px; margin: 24px 0; }
+}
+
+@media (max-width: 480px) {
+  .feature-text h2 { font-size: 1.8rem; }
+  .feature-text p { font-size: 1rem; }
+  .feature-divider { height: 4px; margin: 16px 0; }
+  .feature-image { padding: 6px; max-width: 90%; }
+  .form-container iframe { height: 1100px; }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 2px solid #333;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.donate-footer-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--accent);
+  color: #000;
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.donate-footer-btn:hover {
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">
+    <img src="Images/Banner.webp" alt="Hader for Commissioner" />
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Priorities.html">Priorities</a>
+    <a href="Accomplishments.html">Accomplishments</a>
+    <a href="Social%20Media.html">Social Media</a>
+    <a href="Voting%20Info.html">Voting Info</a>
+    <a href="Donate.html" class="donate-link">Donate</a>
+  </nav>
+
+  <!-- Mobile Burger Menu -->
+  <div class="burger" id="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="close-btn" id="close-nav">×</button>
+    <a href="index.html">Home</a>
+    <a href="Priorities.html">Priorities</a>
+    <a href="Accomplishments.html">Accomplishments</a>
+    <a href="Social%20Media.html">Social Media</a>
+    <a href="Voting Info.html">Voting Info</a>
+    <a href="Donate.html">Donate</a>
+  </div>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main>
+
+  <!-- HERO / SLIDESHOW SECTION -->
+  <section class="hero-frame">
+    <div class="hero">
+      <img src="Images/Bridge.webp" class="active" alt="Marc Hader at bridge">
+      <img src="Images/Train.webp" alt="Marc Hader near train">
+      <img src="Images/People.webp" alt="Marc Hader with community members">
+      <img src="Images/BBQ.webp" alt="Marc Hader with community members">
+      <img src="Images/4H.webp" alt="Marc Hader with community members">
+
+      <!-- Hero Captions -->
+      <div class="caption active">Experience you can rely on</div>
+      <div class="caption">Reconstructed 9 bridges and rehabilitated others while saving $750,000</div>
+      <div class="caption">Promises Made, Promises Kept</div>
+      <div class="caption">Proud Canadian County resident</div>
+      <div class="caption">Committed to our community</div>
+    </div>
+  </section>
+
+  <!-- ================= MARC FEATURE SECTION ================= -->
+  <section class="marc-feature">
+    <div class="feature-content">
+      <div class="feature-text">
+        <h2>Your <em>FULL-TIME</em> County Commissioner</h2>
+        <p>Marc Hader is dedicated to serving our community every day with experience, integrity, and a practical approach to solving local challenges. He works to ensure projects are completed efficiently, resources are managed responsibly, and residents’ voices are heard.</p>
+        <p>Guided by conservative values, Marc focuses on keeping promises, maintaining transparency, and making decisions that benefit families, businesses, and the community as a whole. His commitment is simple: to serve the people of our county with accountability, dedication, and care.</p>
+      </div>
+      <div class="feature-image">
+        <img src="Images/Marc H..webp" alt="Marc Hader" />
+      </div>
+    </div>
+  </section>
+
+ <!-- ================= GOOGLE FORM EMBED ================= -->
+<section class="form-container">
+  <h2>Sign Up for Text Alerts</h2>
+
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeu-EO_Azpwk8dl49QAGv0G63aLr53drpK3AWgqxN0yXmjVsQ/viewform?embedded=true"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0">
+    Loading…
+  </iframe>
+
+  <p style="color:#ccc; font-size:0.85rem; margin-top:12px;">
+    By providing your mobile phone number you consent to receive recurring text messages from Friends of Marc Hader 2026. Message & Data Rates May Apply. Reply STOP to opt-out. Reply HELP for Help. Please read our 
+    <a href="PrivacyPolicy.html" style="color:var(--accent);" target="_blank">privacy policy</a> 
+    for more information.
+  </p>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>Website donated by PixelDominion LLC.</p>
+  <p>© Friends of Marc Hader 2026 | <a href="PrivacyPolicy.html" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a></p>
+  <a href="Donate.html" class="donate-footer-btn">
+    Support Marc’s Campaign Today
+  </a>
+</footer>
+
+
+<script>
+  // ================= MOBILE NAVIGATION =================
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobile-nav');
+  const closeNav = document.getElementById('close-nav');
+
+  burger.addEventListener('click', () => mobileNav.classList.add('active'));
+  closeNav.addEventListener('click', () => mobileNav.classList.remove('active'));
+
+  // ================= HERO SLIDESHOW =================
+  const slides = document.querySelectorAll('.hero img');
+  const captions = document.querySelectorAll('.hero .caption');
+  let current = 0;
+
+  setInterval(() => {
+    slides.forEach(img => img.classList.remove('active'));
+    captions.forEach(caption => caption.classList.remove('active'));
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+    captions[current].classList.add('active');
+  }, 6000);
+</script>
+
+</body>
+</html>

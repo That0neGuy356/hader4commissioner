@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Donate to Marc Hader | Canadian County Commissioner Campaign</title>
+
+<meta name="description" content="Support Marc Hader’s campaign for Canadian County Commissioner in Oklahoma. Make a secure donation to help fund road projects, public safety initiatives, and community development." />
+<meta name="keywords" content="Donate Marc Hader, Canadian County Commissioner donation, support Marc Hader campaign, Oklahoma county commissioner fundraising, Canadian County community projects" />
+<meta name="author" content="Friends of Marc Hader" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.hader4commissioner.com/Donate.html" />
+
+<!-- Open Graph for Facebook -->
+<meta property="og:title" content="Donate to Marc Hader | Canadian County Commissioner Campaign" />
+<meta property="og:description" content="Help fund Marc Hader’s campaign for Canadian County Commissioner. Support infrastructure improvements, public safety initiatives, and community projects." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.hader4commissioner.com/Donate.html" />
+<meta property="og:image" content="https://www.hader4commissioner.com/Images/Banner.webp" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Donate to Marc Hader | Canadian County Commissioner Campaign" />
+<meta name="twitter:description" content="Support Marc Hader’s campaign for Canadian County Commissioner in Oklahoma. Make a secure donation today to help improve roads, public safety, and community projects." />
+<meta name="twitter:image" content="https://www.hader4commissioner.com/Images/Banner.webp" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Friends of Marc Hader",
+  "url": "https://www.hader4commissioner.com/Donate.html",
+  "logo": "https://www.hader4commissioner.com/Images/Banner.webp",
+  "sameAs": [
+    "https://www.facebook.com/marchader",
+    "https://twitter.com/marchader"
+  ],
+  "description": "Official donation page for Marc Hader's campaign for Canadian County Commissioner in Oklahoma, supporting infrastructure, public safety, and community development projects."
+}
+</script>
+</head>
+
+
+<style>
+
+/* ================= GLOBAL RESET ================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --bg: #000;
+  --accent: #FFD400;
+  --accent-dark: #E6B800;
+  --muted: #fff;
+}
+
+/* ================= GLOBAL FONT (MATCH OTHER PAGES) ================= */
+html {
+  font-family: "Rockwell", "Rockwell Nova", "Roboto Slab", "Arvo", serif;
+}
+body, button, input, textarea, select, a, p,
+h1, h2, h3, h4, h5, h6,
+span, div, li, ul, ol,
+nav, header, footer, section {
+  font-family: inherit;
+}
+
+/* ================= BODY ================= */
+body {
+  background: var(--bg);
+  color: var(--muted);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  background: #111;
+  border-bottom: 2px solid #333;
+  border-radius: 12px;
+}
+
+.logo img {
+  height: 120px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover { transform: scale(1.05); }
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+nav a {
+  background: var(--accent);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+nav a:hover {
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
+/* ================= BURGER ================= */
+.burger {
+  display: none;
+  width: 28px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--accent);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.burger div {
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* ================= MOBILE NAV ================= */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  z-index: 1002;
+}
+.mobile-nav.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-nav a {
+  width: 75%;
+  margin: 12px 0;
+  padding: 16px 32px;
+  background: var(--accent);
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+.mobile-nav a:hover { background: var(--accent-dark); }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* ================= MAIN ================= */
+main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.donate-wrapper p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* ================= DONATION FRAME ================= */
+.donate-frame {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: 16px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent) 0 16px,
+    #000 16px 32px
+  );
+}
+
+.donate-frame iframe {
+  width: 100%;
+  height: 950px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 2px solid #333;
+  font-size: 0.9rem;
+}
+.donate-footer-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--accent);
+  color: #000;
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.donate-footer-btn:hover {
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE (MATCH INDEX PAGE) ================= */
+
+/* MOBILE NAV TRIGGERS AT 1080px — NOT 880 */
+@media (max-width: 1080px) {
+  nav { display: none; }
+  .burger { display: flex; }
+}
+
+/* Small screens adjust iframe height */
+@media (max-width: 768px) {
+  .donate-frame iframe { height: 1100px; }
+}
+
+@media (max-width: 480px) {
+  .donate-frame iframe { height: 1250px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Images/Banner.webp" alt="Hader for Commissioner">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Priorities.html">Priorities</a>
+    <a href="Accomplishments.html">Accomplishments</a>
+    <a href="Social%20Media.html">Social Media</a>
+    <a href="Voting%20Info.html">Voting Info</a>
+    <a href="Donate.html">Donate</a>
+  </nav>
+
+  <div class="burger" id="burger">
+    <div></div><div></div><div></div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="close-btn" id="close-nav">×</button>
+    <a href="index.html">Home</a>
+    <a href="Priorities.html">Priorities</a>
+    <a href="Accomplishments.html">Accomplishments</a>
+    <a href="Social%20Media.html">Social Media</a>
+    <a href="Voting%20Info.html">Voting Info</a>
+    <a href="Donate.html">Donate</a>
+  </div>
+</header>
+
+<main>
+  <section class="donate-wrapper">
+    <h1>Support Marc Hader</h1>
+    <p>
+      Marc Hader is grateful for the trust and support of the people of Canadian County.
+      Your contribution helps sustain honest leadership, careful stewardship of tax dollars,
+      and a continued commitment to serving our community with integrity.
+    </p>
+
+    <div class="donate-frame">
+      <iframe
+        src="https://secure.anedot.com/marc-hader-for-county-commissioner/donate"
+        title="Donate to Friends of Marc Hader 2026">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Website donated by PixelDominion LLC.</p>
+  <p>© Friends of Marc Hader 2026 | <a href="PrivacyPolicy.html" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a></p>
+  <a href="Donate.html" class="donate-footer-btn">
+    Support Marc’s Campaign Today
+  </a>
+</footer>
+
+<script>
+const burger = document.getElementById('burger');
+const mobileNav = document.getElementById('mobile-nav');
+const closeNav = document.getElementById('close-nav');
+
+burger.addEventListener('click', () => mobileNav.classList.add('active'));
+closeNav.addEventListener('click', () => mobileNav.classList.remove('active'));
+</script>
+
+</body>
+</html>
