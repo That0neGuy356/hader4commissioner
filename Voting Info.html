@@ -95,6 +95,7 @@ header{
   border-radius:12px;
 }
 
+/* ================= LOGO ================= */
 .logo img{
   height:120px;
   border-radius:12px;
@@ -102,8 +103,8 @@ header{
 }
 .logo img:hover{ transform:scale(1.05); }
 
+/* ================= DESKTOP NAV ================= */
 nav{ display:flex; gap:8px; }
-
 nav a{
   background:var(--accent);
   color:#000;
@@ -130,6 +131,7 @@ nav a:hover{
   padding:4px;
   border-radius:4px;
   cursor:pointer;
+  margin:12px auto; /* centers below header */
 }
 .burger div{
   height:3px;
@@ -315,12 +317,21 @@ footer{
 @media(max-width:1080px){
   nav{display:none;}
   .burger{display:flex;}
+  
+  /* Center banner/logo on mobile */
+  header .logo{
+    display:flex;
+    justify-content:center;
+    width:100%;
+  }
 }
+
 @media(max-width:768px){
   .info-table{display:none;}
   .mobile-card{display:block;}
 }
 </style>
+
 </head>
 
 <body>
@@ -338,21 +349,24 @@ footer{
     <a href="Voting%20Info.html">Voting Info</a>
     <a href="Donate.html">Donate</a>
   </nav>
-
-  <div class="burger" id="burger">
-    <div></div><div></div><div></div>
-  </div>
-
-  <div class="mobile-nav" id="mobile-nav">
-    <button class="close-btn" id="close-nav">×</button>
-    <a href="index.html">Home</a>
-    <a href="Priorities.html">Priorities</a>
-    <a href="Accomplishments.html">Accomplishments</a>
-    <a href="Social%20Media.html">Social Media</a>
-    <a href="Voting%20Info.html">Voting Info</a>
-    <a href="Donate.html">Donate</a>
-  </div>
 </header>
+
+<!-- Burger button moved below header for mobile -->
+<div class="burger" id="burger">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<div class="mobile-nav" id="mobile-nav">
+  <button class="close-btn" id="close-nav">×</button>
+  <a href="index.html">Home</a>
+  <a href="Priorities.html">Priorities</a>
+  <a href="Accomplishments.html">Accomplishments</a>
+  <a href="Social%20Media.html">Social Media</a>
+  <a href="Voting%20Info.html">Voting Info</a>
+  <a href="Donate.html">Donate</a>
+</div>
 
 <main>
 
@@ -361,6 +375,7 @@ footer{
 <div class="hazard-frame">
   <img src="Images/District 1.webp" alt="Map of District 1">
 </div>
+
 
 <div class="info-box">
   <h2>Primary Election – June 16, 2026</h2>

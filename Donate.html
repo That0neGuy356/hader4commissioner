@@ -40,17 +40,10 @@
   "description": "Official donation page for Marc Hader's campaign for Canadian County Commissioner in Oklahoma, supporting infrastructure, public safety, and community development projects."
 }
 </script>
-</head>
-
 
 <style>
-
 /* ================= GLOBAL RESET ================= */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ================= ROOT VARIABLES ================= */
 :root {
@@ -60,16 +53,13 @@
   --muted: #fff;
 }
 
-/* ================= GLOBAL FONT (MATCH OTHER PAGES) ================= */
-html {
-  font-family: "Rockwell", "Rockwell Nova", "Roboto Slab", "Arvo", serif;
-}
+/* ================= GLOBAL FONT ================= */
+html { font-family: "Rockwell","Rockwell Nova","Roboto Slab","Arvo", serif; }
+
 body, button, input, textarea, select, a, p,
-h1, h2, h3, h4, h5, h6,
-span, div, li, ul, ol,
-nav, header, footer, section {
-  font-family: inherit;
-}
+h1,h2,h3,h4,h5,h6,
+span,div,li,ul,ol,
+nav,header,footer,section { font-family: inherit; }
 
 /* ================= BODY ================= */
 body {
@@ -96,14 +86,14 @@ header {
 .logo img {
   height: 120px;
   border-radius: 12px;
-  transition: transform 0.3s ease;
+  transition: transform .3s ease;
 }
+
 .logo img:hover { transform: scale(1.05); }
 
-nav {
-  display: flex;
-  gap: 8px;
-}
+/* ================= DESKTOP NAV ================= */
+nav { display: flex; gap: 8px; }
+
 nav a {
   background: var(--accent);
   color: #000;
@@ -112,27 +102,30 @@ nav a {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform .3s, background .3s;
 }
+
 nav a:hover {
   background: var(--accent-dark);
   transform: scale(1.05);
 }
 
-/* ================= BURGER ================= */
+/* ================= BURGER MENU ================= */
 .burger {
   display: none;
-  width: 28px;
-  height: 20px;
+  width: 40px;
+  height: 30px;
   flex-direction: column;
   justify-content: space-between;
   background: var(--accent);
-  padding: 4px;
-  border-radius: 4px;
+  padding: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  margin: 12px auto;
 }
+
 .burger div {
-  height: 3px;
+  height: 4px;
   background: #000;
   border-radius: 2px;
 }
@@ -148,13 +141,15 @@ nav a:hover {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s;
+  transition: opacity .5s;
   z-index: 1002;
 }
+
 .mobile-nav.active {
   opacity: 1;
   pointer-events: auto;
 }
+
 .mobile-nav a {
   width: 75%;
   margin: 12px 0;
@@ -167,6 +162,7 @@ nav a:hover {
   text-decoration: none;
   text-align: center;
 }
+
 .mobile-nav a:hover { background: var(--accent-dark); }
 
 .close-btn {
@@ -189,7 +185,15 @@ main {
   text-align: center;
 }
 
-h1 {
+/* ================= DONATE SECTION ================= */
+.donate-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.donate-wrapper h1 {
   font-size: clamp(32px, 5vw, 48px);
   color: var(--accent);
   margin-bottom: 20px;
@@ -198,26 +202,31 @@ h1 {
 .donate-wrapper p {
   font-size: 1.2rem;
   line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  color: #fff;
+  margin-bottom: 40px;
 }
 
 /* ================= DONATION FRAME ================= */
 .donate-frame {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 14px;
+  width: 100%;
   border-radius: 16px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--accent) 0 16px,
-    #000 16px 32px
-  );
+  padding: 0;
+  overflow: hidden;
+  background: repeating-linear-gradient(45deg, var(--accent) 0 16px, #000 16px 32px);
 }
 
-.donate-frame iframe {
+.iframe-container {
+  position: relative;
   width: 100%;
-  height: 950px;
+  padding-top: 120%; /* Aspect ratio: 5:6. Can adjust as needed */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
   border-radius: 12px;
   background: #fff;
@@ -231,7 +240,9 @@ footer {
   padding: 20px 10px;
   border-top: 2px solid #333;
   font-size: 0.9rem;
+  margin-top: auto;
 }
+
 .donate-footer-btn {
   display: inline-block;
   margin-top: 20px;
@@ -242,39 +253,55 @@ footer {
   border-radius: 10px;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: transform .3s, background .3s;
 }
+
 .donate-footer-btn:hover {
   background: var(--accent-dark);
   transform: scale(1.05);
 }
 
-/* ================= RESPONSIVE (MATCH INDEX PAGE) ================= */
-
-/* MOBILE NAV TRIGGERS AT 1080px — NOT 880 */
-@media (max-width: 1080px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width:1080px) {
   nav { display: none; }
   .burger { display: flex; }
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0;
+  }
+
+  .logo img { margin: 0 auto; }
 }
 
-/* Small screens adjust iframe height */
-@media (max-width: 768px) {
-  .donate-frame iframe { height: 1100px; }
+/* Small devices */
+@media (max-width:768px) {
+  .iframe-container { padding-top: 140%; }
 }
 
-@media (max-width: 480px) {
-  .donate-frame iframe { height: 1250px; }
+/* Extra small devices */
+@media (max-width:480px) {
+  .iframe-container { padding-top: 160%; }
 }
 
+/* Ultra-small devices */
+@media (max-width:360px) {
+  .iframe-container { padding-top: 180%; }
+}
 </style>
-</head>
 
+
+</head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
   <div class="logo">
     <img src="Images/Banner.webp" alt="Hader for Commissioner">
   </div>
 
+  <!-- Desktop Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="Priorities.html">Priorities</a>
@@ -283,22 +310,27 @@ footer {
     <a href="Voting%20Info.html">Voting Info</a>
     <a href="Donate.html">Donate</a>
   </nav>
-
-  <div class="burger" id="burger">
-    <div></div><div></div><div></div>
-  </div>
-
-  <div class="mobile-nav" id="mobile-nav">
-    <button class="close-btn" id="close-nav">×</button>
-    <a href="index.html">Home</a>
-    <a href="Priorities.html">Priorities</a>
-    <a href="Accomplishments.html">Accomplishments</a>
-    <a href="Social%20Media.html">Social Media</a>
-    <a href="Voting%20Info.html">Voting Info</a>
-    <a href="Donate.html">Donate</a>
-  </div>
 </header>
 
+<!-- MOBILE BURGER BUTTON -->
+<div class="burger" id="burger">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <button class="close-btn" id="close-nav">×</button>
+  <a href="index.html">Home</a>
+  <a href="Priorities.html">Priorities</a>
+  <a href="Accomplishments.html">Accomplishments</a>
+  <a href="Social%20Media.html">Social Media</a>
+  <a href="Voting%20Info.html">Voting Info</a>
+  <a href="Donate.html">Donate</a>
+</div>
+
+<!-- ================= MAIN ================= -->
 <main>
   <section class="donate-wrapper">
     <h1>Support Marc Hader</h1>
@@ -308,30 +340,38 @@ footer {
       and a continued commitment to serving our community with integrity.
     </p>
 
+    <!-- Responsive donation iframe -->
     <div class="donate-frame">
-      <iframe
-        src="https://secure.anedot.com/marc-hader-for-county-commissioner/donate"
-        title="Donate to Friends of Marc Hader 2026">
-      </iframe>
+      <div class="iframe-container">
+        <iframe
+          src="https://secure.anedot.com/marc-hader-for-county-commissioner/donate"
+          title="Donate to Friends of Marc Hader 2026"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </section>
 </main>
 
+
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>Website donated by PixelDominion LLC.</p>
-  <p>© Friends of Marc Hader 2026 | <a href="PrivacyPolicy.html" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a></p>
-  <a href="Donate.html" class="donate-footer-btn">
-    Support Marc’s Campaign Today
-  </a>
+  <p>© Friends of Marc Hader 2026 |
+    <a href="PrivacyPolicy.html" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a>
+  </p>
+  <a href="Donate.html" class="donate-footer-btn">Support Marc’s Campaign Today</a>
 </footer>
 
 <script>
+// Mobile navigation
 const burger = document.getElementById('burger');
 const mobileNav = document.getElementById('mobile-nav');
 const closeNav = document.getElementById('close-nav');
 
-burger.addEventListener('click', () => mobileNav.classList.add('active'));
-closeNav.addEventListener('click', () => mobileNav.classList.remove('active'));
+burger.addEventListener('click', ()=> mobileNav.classList.add('active'));
+closeNav.addEventListener('click', ()=> mobileNav.classList.remove('active'));
 </script>
 
 </body>
